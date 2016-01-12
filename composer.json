@@ -1,0 +1,27 @@
+{
+    "name": "jnaxo/country-codes",
+    "description": "Country codes ISO 3166-1 with zone filtering",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "J. Ignacio Fuentes",
+            "email": "jfuentes@zeek.cl"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/support": "~5.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jnaxo\\CountryCodes\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": { "CountryCodes\\Tests\\": "tests/" }
+    }
+}
