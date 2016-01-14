@@ -17,6 +17,6 @@ class Country extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'bank-codes.country';
+        return 'CountryStore';
     }
 }

@@ -1,19 +1,16 @@
 <?php
 
-namespace Jnaxo\CountryStore;
+namespace Jnaxo\CountryCodes;
 
 use Illuminate\Http\Request;
-use Jnaxo\Store\ApiManager;
-use Jnaxo\Store\CountryAdapter;
+use Jnaxo\CountryCodes\Store\ApiManager;
+use Jnaxo\CountryCodes\Store\CountryAdapter;
 
-/*
- * facade
- */
 
 class CountryStore extends ApiManager
 {
 
-    public function Response(Request $request)
+    public function Response(Request $request, $id)
     {
         $uri = $request->path();
         $method = $request->method();
@@ -22,41 +19,44 @@ class CountryStore extends ApiManager
         {
             if ($request->has('filter'))
             {
-                
+                $zones = CountryAdapter::zoneByName($request->filter);
             } else
             {
                 $zones = CountryAdapter::zones();
-                return $this->apiOutput($this->all($zones));
             }
+            return $this->apiOutput(function () use ($zones)
+                    {
+                        $data = array();
+                        foreach ($zones as $i => $zone)
+                        {
+                            $tmp_data[$i] = [
+                                'zone' => $zone->name,
+                                'countries' => CountryAdapter::getByZone($zone)
+                            ];
+                            array_push($data, $tmp_data[$i]);
+                        }
+                        return $data;
+                    });
         } elseif ($request->is('countries/*'))
         {
-            $countries = CountryAdapter::getById($request->input('id'));
-            return $this->apiOutput($this->get($countries));
+            $country = CountryAdapter::getById($id);
+            return $this->apiOutput(function () use ($country)
+                    {
+                        $zone = CountryAdapter::zoneById($country->zone_id);
+
+                        $country_data = [
+                            'id' => intval($country->numeric_code),
+                            'name' => $country->name,
+                            'zone' => $zone->name,
+                            'alpha2' => $country->alpha2,
+                            'alpha3' => $country->alpha3
+                        ];
+                        return $country_data;
+                    });
         } else
         {
-            
+            dd('error');
         }
-
-        
-    }
-
-    public function all($zones)
-    {
-        $data = array();
-        foreach ($zones as $i => $zone)
-        {
-            $tmp_data[$i] = [
-                'zone' => $zone->name,
-                'countries' => CountryAdapter::getByZone($zone->countries)
-            ];
-            array_push($data, $tmp_data[$i]);
-        }
-        return $data;
-    }
-
-    public function get($id)
-    {
-        
     }
 
 }

@@ -1,6 +1,7 @@
 <?php
 
-namespace Jnaxo\Store\ApiManager;
+namespace Jnaxo\CountryCodes\Store;
+use Closure;
 
 class ApiManager
 {
@@ -20,7 +21,7 @@ class ApiManager
             'data' => null
         ));
     }
-    
+
     /**
      * Create a json Response, including data and errors
      * @param  array  $data   The data
@@ -28,7 +29,7 @@ class ApiManager
      * @return Responce	The responce containing json encoded data
      */
     private function jsonReply(array $data)
-    {      
+    {
         return $response = response()->json(array(
             'code' => 200,
             'status' => 'success',
@@ -37,7 +38,7 @@ class ApiManager
             'data' => $data
         ));
     }
-    
+
     /**
      * Execute the passed function then return the result (or exceptions) as json
      * @param  Closure $f The function to execute
@@ -58,10 +59,10 @@ class ApiManager
                 $return['exception'] = "E: Resource not exist";
                 return $this->jsonError($return);
             }
-            
+
             /* Success */
             return $this->jsonReply($return);
-            
+
         } catch (AppException $e)
         {
             $return['exception'] = $e->getMessage();

@@ -1,6 +1,6 @@
 <?php
 
-namespace Jnaxo\Store\CountryAdapter;
+namespace Jnaxo\CountryCodes\Store;
 
 use DB;
 /**
@@ -10,7 +10,7 @@ use DB;
  */
 
 class CountryAdapter{
-    
+
      /**
      * Get an instance of Country.
      *
@@ -18,31 +18,41 @@ class CountryAdapter{
      *
      * @return null|Country
      */
-    
-     public function zones()
+
+     public static function zones()
      {
-         return $country = DB::table('zones')->get();
+         return $zones = DB::table('zones')->get();
      }
 
-
-     public function getById($id){
-          return $country = DB::table('countries')->where('id',$id)->get();
+     public static function zoneByName($name)
+     {
+         return $zone = DB::table('zones')->where('name', $name)->get();
      }
-     
-     public function getByName($name){
+
+     public static function zoneById($id){
+         $zone = DB::table('zones')->where('id', $id)->get();
+         return $zone[0];
+     }
+
+     public static function getById($id){
+          $country = DB::table('countries')->where('numeric_code',$id)->get();
+          return $country[0];
+     }
+
+     public static function getByName($name){
          return $country = DB::table('countries')->where('name',$name)->get();
      }
-    
-     public function getByZone($zone){
-         return $country = DB::table('countries')->where('zone',$zone)->get();
+
+     public static function getByZone($zone){
+         return $country = DB::table('countries')->where('zone_id',$zone->id)->get();
      }
-     
-     public function getByCode($code , $format = 'alpha2'){
+
+     public static function getByCode($code , $format = 'alpha2'){
          if($format == 'alpha2'){
-             
+
          }elseif ('alpha3')
         {
-            
+
         }
      }
 }
