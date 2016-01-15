@@ -16,7 +16,10 @@ class CountryCodesServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->setupConfig($this->app);
+        if (!$this->app->routesAreCached())
+        {
+            require __DIR__ . '/config/routes.php';
+        }
         $this->setupMigrations($this->app);
         $this->setupSeeds($this->app);
     }
@@ -32,22 +35,6 @@ class CountryCodesServiceProvider extends ServiceProvider
       {
           return new CountryStore();
       });
-    }
-
-    /**
-     * Setup the config.
-     *
-     * @param \Illuminate\Contracts\Container\Container $app
-     *
-     * @return void
-     */
-    protected function setupRoutes(Application $app)
-    {
-        $source = realpath(__DIR__.'/../config/routes.php');
-        if ($app instanceof LaravelApplication && $app->runningInConsole()) {
-            $this->publishes([$source => app_path('Http/routes.php')]);
-        }
-        $this->mergeConfigFrom($source, 'routes');
     }
 
     /**
