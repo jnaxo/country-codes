@@ -24,6 +24,6 @@
     "autoload-dev": {
         "psr-4": { "CountryCodes\\Tests\\": "tests/" }
     },
-    "minimum-stability": "@dev",
+    "minimum-stability": "dev",
     "prefer-stable": true
 }
