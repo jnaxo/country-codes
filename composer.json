@@ -1,6 +1,6 @@
 {
     "name": "jnaxo/country-codes",
-    "description": "Country codes ISO 3166-1 with zone filtering",    
+    "description": "Country codes ISO 3166-1 with zone filtering",
     "license": "MIT",
     "authors": [
         {
