@@ -1,7 +1,6 @@
 {
     "name": "jnaxo/country-codes",
-    "description": "Country codes ISO 3166-1 with zone filtering",
-    "type": "library",
+    "description": "Country codes ISO 3166-1 with zone filtering",    
     "license": "MIT",
     "authors": [
         {
@@ -23,7 +22,5 @@
     },
     "autoload-dev": {
         "psr-4": { "CountryCodes\\Tests\\": "tests/" }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }

@@ -12,11 +12,9 @@ use DB;
 class CountryAdapter{
 
      /**
-     * Get an instance of Country.
+     * Get a list of Zones.
      *
-     * @param id
-     *
-     * @return null|Country
+     * @return null| list of Zone
      */
 
      public static function zones()

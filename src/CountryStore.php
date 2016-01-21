@@ -59,4 +59,17 @@ class CountryStore extends ApiManager
         }
     }
 
+    public function create(){
+
+    }
+
+    public function store(){}
+
+    public function list(){}
+
+    public function show(){}
+
+    public function update(){}
+
+    public function destroy(){}
 }
