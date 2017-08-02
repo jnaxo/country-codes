@@ -16,10 +16,6 @@ class CountryCodesServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if (!$this->app->routesAreCached())
-        {
-            require __DIR__ . '/config/routes.php';
-        }
         $this->setupMigrations($this->app);
         $this->setupSeeds($this->app);
     }
@@ -31,10 +27,9 @@ class CountryCodesServiceProvider extends ServiceProvider
      */
     public function register()
     {
-      $this->app->singleton('CountryStore', function ()
-      {
-          return new CountryStore();
-      });
+        $this->app->singleton('CountryStore', function () {
+            return new CountryStore();
+        });
     }
 
     /**
@@ -49,7 +44,10 @@ class CountryCodesServiceProvider extends ServiceProvider
         $source = realpath(__DIR__.'/../database/migrations/');
 
         if ($app instanceof LaravelApplication && $app->runningInConsole()) {
-            $this->publishes([$source => database_path('migrations')], 'migrations');
+            $this->publishes(
+                [$source => database_path('migrations')],
+                'migrations'
+            );
         }
     }
 
