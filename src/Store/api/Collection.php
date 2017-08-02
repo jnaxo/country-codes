@@ -3,7 +3,7 @@
 namespace Jnaxo\CountryCodes\Store\api;
 
 use Illuminate\Database\Query\Builder;
-use Jnaxo\CountryCodes\Store\api\ApiPaginator;
+use Jnaxo\CountryCodes\Store\api\Paginator;
 use Jnaxo\CountryCodes\Store\api\Item;
 
 class Collection
@@ -39,7 +39,7 @@ class Collection
         if ($request) {
             $this->offset = $request->page['offset'] ? $request->page['offset'] : 0;
             $this->limit = $request->page['limit'] ? $request->page['limit'] : 50;
-            $paginator = new ApiPaginator($query, $this->offset, $this->limit);
+            $paginator = new Paginator($query, $this->offset, $this->limit);
             $paginator->paginate();
 
             $links = ['self' => urldecode($request->fullUrl())];

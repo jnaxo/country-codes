@@ -2,7 +2,7 @@
 
 namespace Jnaxo\CountryCodes\Store\api;
 
-class ApiPaginator
+class Paginator
 {
     /** Set the offset from the first value to get */
     protected $offset;
