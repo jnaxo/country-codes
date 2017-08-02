@@ -4,6 +4,10 @@ namespace Jnaxo\CountryCodes;
 
 use Illuminate\Http\Request;
 use Jnaxo\CountryCodes\Store\ApiManager;
+use Jnaxo\CountryCodes\Store\api\Item;
+use Jnaxo\CountryCodes\Store\api\Collection;
+use DB;
+use Route;
 
 class CountryStore extends ApiManager
 {

@@ -3,8 +3,8 @@
 namespace Jnaxo\CountryCodes\Store\api;
 
 use Illuminate\Database\Query\Builder;
-use App\Api\ApiPaginator;
-use App\Api\Item;
+use Jnaxo\CountryCodes\Store\api\ApiPaginator;
+use Jnaxo\CountryCodes\Store\api\Item;
 
 class Collection
 {

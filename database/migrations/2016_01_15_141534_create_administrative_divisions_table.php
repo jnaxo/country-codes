@@ -14,7 +14,7 @@ class CreateAdministrativeDivisionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('aministrative_divisions', function (Blueprint $table) {
+        Schema::create('administrative_divisions', function (Blueprint $table) {
             $table->increments('id');
             $table->string('code',3);
             $table->string('tag', 10)->nullable;

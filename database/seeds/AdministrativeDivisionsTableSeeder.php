@@ -2,12 +2,10 @@
 
 use Illuminate\Database\Seeder;
 
-class AdministrativeDivisionTableSeeder extends Seeder
+class AdministrativeDivisionsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
-     *
-     * @return void
      */
     public function run()
     {
