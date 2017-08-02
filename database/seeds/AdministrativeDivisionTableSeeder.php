@@ -13,21 +13,44 @@ class AdministrativeDivisionTableSeeder extends Seeder
     {
         DB::table('administrative_divisions')->delete();
 
-        DB::table('administrative_divisions')->insert(['country_id' => 152, 'administrative_division_id' => '', 'name' => "Tarapacá", 'code' => 'TA']);
-    		DB::table('administrative_divisions')->insert(['country_id' => 152, 'administrative_division_id' => '', 'name' => "Antofagasta", 'code' => 'AN']);
-    		DB::table('administrative_divisions')->insert(['country_id' => 152, 'administrative_division_id' => '', 'name' => "Atacama", 'code' => 'AT']);
-    		DB::table('administrative_divisions')->insert(['country_id' => 152, 'administrative_division_id' => '', 'name' => "Coquimbo", 'code' => 'CO']);
-    		DB::table('administrative_divisions')->insert(['country_id' => 152, 'administrative_division_id' => '', 'name' => "Valparaíso", 'code' => 'VS']);
-    		DB::table('administrative_divisions')->insert(['country_id' => 152, 'administrative_division_id' => '', 'name' => "Libertador Gral. Bernardo O'higgins", 'code' => 'LI']);
-    		DB::table('administrative_divisions')->insert(['country_id' => 152, 'administrative_division_id' => '', 'name' => "Maule", 'code' => 'ML']);
-    		DB::table('administrative_divisions')->insert(['country_id' => 152, 'administrative_division_id' => '', 'name' => "BioBio", 'code' => 'BI']);
-    		DB::table('administrative_divisions')->insert(['country_id' => 152, 'administrative_division_id' => '', 'name' => "Araucania", 'code' => 'AR']);
-    		DB::table('administrative_divisions')->insert(['country_id' => 152, 'administrative_division_id' => '', 'name' => "Los Lagos", 'code' => 'LL']);
-    		DB::table('administrative_divisions')->insert(['country_id' => 152, 'administrative_division_id' => '', 'name' => "Aysén del Gral. Carlos Ibáñez del Campo", 'code' => 'AI']);
-    		DB::table('administrative_divisions')->insert(['country_id' => 152, 'administrative_division_id' => '', 'name' => "Magallanes", 'code' => 'MA']);
-    		DB::table('administrative_divisions')->insert(['country_id' => 152, 'administrative_division_id' => '', 'name' => "Metropolitana", 'code' => 'RM']);
-    		DB::table('administrative_divisions')->insert(['country_id' => 152, 'administrative_division_id' => '', 'name' => "Los Ríos", 'code' => 'LR']);
-    		DB::table('administrative_divisions')->insert(['country_id' => 152, 'administrative_division_id' => '', 'name' => "Arica y Parinacota", 'code' => 'AP']);
+        $today = date('Y-m-d H:i:s');
+        $data = [
+            ['name' => 'Tarapacá', 'code' => 'TA', 'tag' => 'I'],
+            ['name' => 'Antofagasta', 'code' => 'AN', 'tag' => 'II'],
+            ['name' => 'Atacama', 'code' => 'AT', 'tag' => 'III'],
+            ['name' => 'Coquimbo', 'code' => 'CO', 'tag' => 'IV'],
+            ['name' => 'Valparaíso', 'code' => 'VS', 'tag' => 'V'],
+            [
+                'name' => "Libertador Gral. Bernardo O'higgins",
+                'code' => 'LI',
+                'tag' => 'VI'
+            ],
+            ['name' => 'Maule', 'code' => 'ML', 'tag' => 'VII'],
+            ['name' => 'BioBio', 'code' => 'BI', 'tag' => 'VIII'],
+            ['name' => 'Araucania', 'code' => 'AR', 'tag' => 'IX'],
+            ['name' => 'Los Lagos', 'code' => 'LL', 'tag' => 'X'],
+            [
+                'name' => 'Aysén del Gral. Carlos Ibáñez del Campo',
+                'code' => 'AI',
+                'tag' => 'XI'
+            ],
+            ['name' => 'Magallanes', 'code' => 'MA', 'tag' => 'XII'],
+            ['name' => 'Metropolitana', 'code' => 'RM', 'tag' => 'XIII'],
+            ['name' => 'Los Ríos', 'code' => 'LR', 'tag' => 'XIV'],
+            ['name' => 'Arica y Parinacota', 'code' => 'AP', 'tag' => 'XV']
+        ];
 
+        foreach ($data as $i => $ad) {
+            DB::table('administrative_divisions')->insert([
+                'id' => $i + 1,
+                'country_id' => 152,
+                'name' => $ad['name'],
+                'code' => $ad['code'],
+                'tag' => $ad['tag'],
+                'administrative_division_kind_id' => 1,
+                'created_at' => $today,
+                'updated_at' => $today,
+            ]);
+        }
     }
 }
