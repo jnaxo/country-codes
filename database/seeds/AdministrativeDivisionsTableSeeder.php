@@ -35,7 +35,8 @@ class AdministrativeDivisionsTableSeeder extends Seeder
             ['name' => 'Magallanes', 'code' => 'MA', 'tag' => 'XII'],
             ['name' => 'Metropolitana', 'code' => 'RM', 'tag' => 'XIII'],
             ['name' => 'Los Ríos', 'code' => 'LR', 'tag' => 'XIV'],
-            ['name' => 'Arica y Parinacota', 'code' => 'AP', 'tag' => 'XV']
+            ['name' => 'Arica y Parinacota', 'code' => 'AP', 'tag' => 'XV'],
+            ['name' => 'Ñuble', 'code' => '', 'tag' => 'XVI']
         ];
 
         foreach ($data as $i => $ad) {
