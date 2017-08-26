@@ -44,9 +44,9 @@ class CountryStore extends ApiManager
     /**
      * Get Country item. Optional include administrative areas
      *
-     * @param $country_id
-     * @param Request $request
-     * @return mixed Country item
+     * @param int $country_id
+     * @param Illuminate\Http\Request $request
+     * @return mixed Jnaxo\CountryCodes\Country item
      */
     public function country($country_id, Request $request = null)
     {
@@ -76,8 +76,8 @@ class CountryStore extends ApiManager
     /**
      * Get Country list
      *
-     * @param Request $request
-     * @return mixed Country collection
+     * @param Illuminate\Http\Request $request
+     * @return mixed Jnaxo\CountryCodes\Country collection
      */
     public function countries(Request $request = null)
     {
@@ -93,9 +93,9 @@ class CountryStore extends ApiManager
     /**
      * Get Administrative area item, optional include cities
      *
-     * @param $admin_area_id
-     * @param Request $request
-     * @return mixed Administrative area item
+     * @param int $admin_area_id
+     * @param Illuminate\Http\Request $request
+     * @return mixed Jnaxo\CountryCodes\AdministrativeArea item
      */
     public function administrativeArea($admin_area_id, Request $request = null)
     {
@@ -123,11 +123,11 @@ class CountryStore extends ApiManager
     }
 
     /**
-     * Get Administrative areas list of a country
+     * Get Administrative areas collection of a country given
      *
-     * @param type $country_id
-     * @param Request $request
-     * @return mixed Administrative area collection
+     * @param int $country_id
+     * @param Illuminate\Http\Request $request
+     * @return mixed Jnaxo\CountryCodes\AdministrativeArea collection
      */
     public function administrativeAreas($country_id, Request $request = null)
     {
@@ -144,9 +144,9 @@ class CountryStore extends ApiManager
     /**
      * Get city item, optional include administrative division.
      *
-     * @param $city_id
-     * @param Request $request
-     * @return mixed City item
+     * @param int $city_id
+     * @param Illuminate\Http\Request $request
+     * @return mixed Jnaxo\CountryCodes\City item
      */
     public function city($city_id, Request $request = null)
     {
@@ -168,9 +168,9 @@ class CountryStore extends ApiManager
     /**
      * Get country cities
      *
-     * @param $country_id
-     * @param Request $request
-     * @return mixed city collection
+     * @param int $country_id
+     * @param Illuminate\Http\Request $request
+     * @return mixed Jnaxo\CountryCodes\City collection
      */
     public function cities($country_id, Request $request = null)
     {
