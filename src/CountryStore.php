@@ -50,7 +50,7 @@ class CountryStore extends ApiManager
      */
     public function country($country_id, Request $request = null)
     {
-        $country = Country::find($country_id);
+        $country = Country::with('zone')->find($country_id);
 
         if ($request) {
             $included = [];
