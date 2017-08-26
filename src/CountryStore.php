@@ -4,9 +4,10 @@ namespace Jnaxo\CountryCodes;
 
 use Illuminate\Http\Request;
 use Jnaxo\CountryCodes\Store\ApiManager;
-use Jnaxo\CountryCodes\Store\api\Item;
 use Jnaxo\CountryCodes\Store\api\Collection;
-use DB;
+use Jnaxo\CountryCodes\Country;
+use Jnaxo\CountryCodes\AdministrativeArea;
+use Jnaxo\CountryCodes\City;
 use Route;
 
 class CountryStore extends ApiManager
@@ -29,182 +30,161 @@ class CountryStore extends ApiManager
             return CountryStore::countries($request);
         })->name('countries');
 
-        Route::get('administrative_divisions/{id}', function ($id) {
+        Route::get('administrative_areas/{id}', function ($id) {
             $request = request();
-            return CountryStore::administrativeDivision($id, $request);
-        })->name('administrative_division');
+            return CountryStore::administrativeArea($id, $request);
+        })->name('administrative_area');
 
-        Route::get('countries/{country_id}/cities/{city_id}', function (
-                $country_id,
-                $city_id
-            ) {
+        Route::get('cities/{city_id}', function ($city_id) {
                 $request = request();
-                return CountryStore::city($country_id, $city_id, $request);
-        })->name('countries.citiy');
+                return CountryStore::city($city_id, $request);
+        })->name('city');
     }
 
     /**
-     * Get Country item, include administrative divisions
+     * Get Country item. Optional include administrative areas
      *
      * @param $country_id
      * @param Request $request
+     * @return mixed Country item
      */
     public function country($country_id, Request $request = null)
     {
-        $links = $request ? ['self' => $request->url()] : [];
-        $country = $this
-                ->getCountries()
-                ->where('countries.id', $country_id)
-                ->first();
+        $country = Country::find($country_id);
 
-        $administrative_divisions = $this
-                ->getAdministrativeDivisions()
-                ->where('administrative_divisions.country_id',$country_id);
-
-        $ad_included = new Collection(
-                $administrative_divisions,
-                'administrative_division'
-            );
-
-        return $this->respondWithItem(
+        if ($request) {
+            $included = [];
+            $query = $country->getInlcudeResources($request->include);
+            if ($query) {
+                $collection = new Collection(
+                    $query,
+                    str_singular($request->include)
+                );
+                $included = $collection->toArray();
+            }
+            $links = $request ? ['self' => $request->url()] : [];
+            return $this->respondWithItem(
                 $country,
                 'country',
                 $links,
-                $ad_included->toArray()
+                $included
             );
+        }
+        return $country;
     }
 
     /**
      * Get Country list
      *
      * @param Request $request
+     * @return mixed Country collection
      */
     public function countries(Request $request = null)
     {
-        $query = $this->getCountries();
-        $resource = new Collection($query, 'country', $request);
+        $query = Country::with('zone');
 
-        return $this->respondWithCollection($resource);
+        if ($request) {
+            $resource = new Collection($query, 'country', $request);
+            return $this->respondWithCollection($resource);
+        }
+        return $query->get();
     }
 
     /**
-     * Get Administrative division item, include cities
+     * Get Administrative area item, optional include cities
      *
-     * @param $admin_division_id
+     * @param $admin_area_id
      * @param Request $request
+     * @return mixed Administrative area item
      */
-    public function administrativeDivision($admin_division_id, Request $request = null) {
-        $links = $request ? ['self' => $request->url()] : [];
-        $admin_division = $this
-                ->getAdministrativeDivisions()
-                ->where('administrative_divisions.id', $admin_division_id)
-                ->first();
+    public function administrativeArea($admin_area_id, Request $request = null)
+    {
+        $admin_area = AdministrativeArea::find($admin_area_id);
 
-        $cities = $this->getCitiesOfAD($admin_division_id);
-        $cities_included = new Collection($cities, 'city');
-
-        return $this->respondWithItem(
-                $admin_division,
-                'administrative_division',
+        if ($request) {
+            $included = [];
+            if (
+            $request->has('include') &&
+            AdministrativeArea::isIncludable($request->include)
+            ) {
+                $cities = $admin_area->cities()->getQuery();
+                $cities_included = new Collection($cities, 'city');
+                $included = $cities_included->toArray();
+            }
+            $links = $request ? ['self' => $request->url()] : [];
+            return $this->respondWithItem(
+                $admin_area,
+                'administrative_area',
                 $links,
-                $cities_included->toArray()
+                $included
             );
+        }
+        return $admin_area;
     }
 
     /**
-     * Get city item, include country and administrative division.
+     * Get Administrative areas list of a country
      *
-     * @param $country_id
+     * @param type $country_id
+     * @param Request $request
+     * @return mixed Administrative area collection
+     */
+    public function administrativeAreas($country_id, Request $request = null)
+    {
+        $query = AdministrativeArea::where('country_id', $country_id)
+            ->with('country');
+
+        if ($request) {
+            $resource = new Collection($query, 'administrative_area', $request);
+            return $this->respondWithCollection($resource);
+        }
+        return $query->get();
+    }
+
+    /**
+     * Get city item, optional include administrative division.
+     *
      * @param $city_id
      * @param Request $request
+     * @return mixed City item
      */
-    public function city($country_id, $city_id, Request $request = null)
+    public function city($city_id, Request $request = null)
     {
-        $included = [];
-        $links = $request ? ['self' => $request->url()] : [];
-        $city = $this->getCityWithAD($city_id)->first();
+        $city = City::find($city_id);
 
-        $country = $this
-                ->getCountries()
-                ->where('countries.id', $country_id)
-                ->first();
-
-        $admin_division = $this
-                ->getAdministrativeDivisions()
-                ->where('administrative_divisions.id', $city->ad_id)
-                ->first();
-
-        unset($city->ad_id);
-
-        $city->country = $country->alpha2;
-        $country_included = new Item($country, 'country');
-        $ad_included = new Item($admin_division, 'administrative_division');
-        array_push($included, $country_included->getData());
-        array_push($included, $ad_included->getData());
-
-        return $this->respondWithItem($city, 'city', $links, $included);
+        if ($request) {
+            $included = [];
+            $query = $city->getInlcudeResources($request->include);
+            if ($query) {
+                $collection = new Collection($query, $request->include);
+                $included = $collection->toArray();
+            }
+            $links = $request ? ['self' => $request->url()] : [];
+            return $this->respondWithItem($city, 'city', $links, $included);
+        }
+        return $city;
     }
 
-    /* Scopes */
-
-    private function getCountries()
+    /**
+     * Get country cities
+     *
+     * @param $country_id
+     * @param Request $request
+     * @return mixed city collection
+     */
+    public function cities($country_id, Request $request = null)
     {
-        return DB::table('countries')
-                ->join('zones', 'zones.id', '=', 'countries.zone_id')
-                ->select('countries.id')
-                ->addSelect('countries.id as numeric_code')
-                ->addSelect('zones.name as zone')
-                ->addSelect('countries.name')
-                ->addSelect('countries.alpha2')
-                ->addSelect('countries.alpha3');
-    }
+        $query = City::with([
+                'administrativeArea' => function ($q) use ($country_id) {
+                    $q->where('country_id', $country_id);
+                }
+            ])
+            ->with('administrativeArea.country');
 
-    private function getAdministrativeDivisions()
-    {
-        return DB::table('administrative_divisions')
-                ->join(
-                    'countries',
-                    'countries.id',
-                    '=',
-                    'administrative_divisions.country_id'
-                )
-                ->join(
-                    'administrative_division_kinds',
-                    'administrative_division_kinds.id',
-                    '=',
-                    'administrative_divisions.administrative_division_kind_id'
-                )
-                ->addSelect('administrative_divisions.id')
-                ->addSelect('administrative_divisions.code')
-                ->addSelect('administrative_division_kinds.name as type')
-                ->addSelect('administrative_divisions.name')
-                ->addSelect('administrative_divisions.tag')
-                ->addSelect('countries.alpha2 as country');
-    }
-
-    private function getCitiesOfAD($ad_id)
-    {
-        return DB::table('cities')
-                ->where('cities.administrative_division_id', $ad_id)
-                ->select('cities.id')
-                ->addSelect('cities.name');
-    }
-
-    private function getCityWithAD($city_id)
-    {
-        return DB::table('cities')
-                ->join(
-                    'administrative_divisions',
-                    'administrative_divisions.id',
-                    '=',
-                    'cities.administrative_division_id'
-                )
-                ->where('cities.id', $city_id)
-                ->select('cities.id')
-                ->addSelect('cities.name')
-                ->addSelect(
-                    'administrative_divisions.code as administrative_division'
-                )
-                ->addSelect('administrative_divisions.id as ad_id');
+        if ($request) {
+            $resource = new Collection($query, 'city', $request);
+            return $this->respondWithCollection($resource);
+        }
+        return $query->get();
     }
 }

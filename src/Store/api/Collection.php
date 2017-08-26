@@ -2,7 +2,7 @@
 
 namespace Jnaxo\CountryCodes\Store\api;
 
-use Illuminate\Database\Query\Builder;
+use Illuminate\Database\Eloquent\Builder;
 use Jnaxo\CountryCodes\Store\api\Paginator;
 use Jnaxo\CountryCodes\Store\api\Item;
 
