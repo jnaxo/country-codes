@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class AdministrativeDivisionKindsTableSeeder extends Seeder
+class ChileanAdministrativeDivisionsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,8 +11,8 @@ class AdministrativeDivisionKindsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('administrative_division_kinds')->delete();
-        DB::table('administrative_division_kinds')->insert([
+        DB::table('ctrystore_administrative_divisions')->delete();
+        DB::table('ctrystore_administrative_divisions')->insert([
             'id' => 1,
             'level' => 1,
             'name' => 'Región',

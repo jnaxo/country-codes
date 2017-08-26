@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class ZonesTableSeeder extends Seeder
+class WorldZonesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,7 @@ class ZonesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('zones')->delete();
+        DB::table('ctrystore_zones')->delete();
 
         $today = date('Y-m-d H:i:s');
 
@@ -35,7 +35,7 @@ class ZonesTableSeeder extends Seeder
         ];
 
         foreach ($zones as $i => $zone ) {
-            DB::table('zones')->insert([
+            DB::table('ctrystore_zones')->insert([
                 'id' => $i,
                 'name' => $zone,
                 'created_at' => $today,

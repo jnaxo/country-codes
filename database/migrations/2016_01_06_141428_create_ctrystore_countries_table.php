@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCountriesTable extends Migration
+class CreateCtrystoreCountriesTable extends Migration
 {
 
     /**
@@ -14,7 +14,7 @@ class CreateCountriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('countries', function (Blueprint $table) {
+        Schema::create('ctrystore_countries', function (Blueprint $table) {
             $table->integer('id')->unsigned();
             $table->primary('id'); // equivalent to numeric code
             $table->integer('zone_id')->unsigned();
@@ -23,7 +23,7 @@ class CreateCountriesTable extends Migration
             $table->string('alpha3',3);
             $table->foreign('zone_id')
                 ->references('id')
-                ->on('zones')
+                ->on('ctrystore_zones')
                 ->onDelete('cascade');
             $table->timestamps();
         });
@@ -36,6 +36,6 @@ class CreateCountriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('countries');
+        Schema::dropIfExists('ctrystore_countries');
     }
 }

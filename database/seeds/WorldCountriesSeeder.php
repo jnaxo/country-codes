@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class CountriesTableSeederFull extends Seeder
+class WorldCountriesSeeder extends Seeder
 {
 
     /**
@@ -12,11 +12,11 @@ class CountriesTableSeederFull extends Seeder
      */
     public function run()
     {
-        DB::table('countries')->delete();
+        DB::table('ctrystore_countries')->delete();
 
         $today = date('Y-m-d H:i:s');
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>20,
             'zone_id'=>1,
             'name'=>"Andorra",
@@ -26,7 +26,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>784,
             'zone_id'=>2,
             'name'=>"United Arab Emirates",
@@ -36,7 +36,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>4,
             'zone_id'=>2,
             'name'=>"Afghanistan",
@@ -46,7 +46,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>28,
             'zone_id'=>3,
             'name'=>"Antigua and Barbuda",
@@ -56,7 +56,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>660,
             'zone_id'=>3,
             'name'=>"Anguilla",
@@ -66,7 +66,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>8,
             'zone_id'=>1,
             'name'=>"Albania",
@@ -76,7 +76,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>51,
             'zone_id'=>2,
             'name'=>"Armenia",
@@ -86,7 +86,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>530,
             'zone_id'=>3,
             'name'=>"Nederlandse Antillen",
@@ -96,7 +96,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>24,
             'zone_id'=>4,
             'name'=>"Angola",
@@ -106,7 +106,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>10,
             'zone_id'=>5,
             'name'=>"Antarctica",
@@ -116,7 +116,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>32,
             'zone_id'=>6,
             'name'=>"Argentina",
@@ -126,7 +126,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>16,
             'zone_id'=>7,
             'name'=>"American Samoa",
@@ -136,7 +136,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>40,
             'zone_id'=>1,
             'name'=>"Austria",
@@ -146,7 +146,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>36,
             'zone_id'=>7,
             'name'=>"Australia",
@@ -156,7 +156,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>533,
             'zone_id'=>3,
             'name'=>"Aruba",
@@ -166,7 +166,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>248,
             'zone_id'=>1,
             'name'=>"Åland Islands",
@@ -176,7 +176,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>31,
             'zone_id'=>2,
             'name'=>"Azerbaijan",
@@ -186,7 +186,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>70,
             'zone_id'=>1,
             'name'=>"Bosnia and Herzegovina",
@@ -196,7 +196,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>52,
             'zone_id'=>3,
             'name'=>"Barbados",
@@ -206,7 +206,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>50,
             'zone_id'=>8,
             'name'=>"Bangladesh",
@@ -216,7 +216,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>56,
             'zone_id'=>1,
             'name'=>"Belgium",
@@ -226,7 +226,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>854,
             'zone_id'=>4,
             'name'=>"Burkina Faso",
@@ -236,7 +236,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>100,
             'zone_id'=>1,
             'name'=>"Bulgaria",
@@ -246,7 +246,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>48,
             'zone_id'=>2,
             'name'=>"Bahrain",
@@ -256,7 +256,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>108,
             'zone_id'=>4,
             'name'=>"Burundi",
@@ -266,7 +266,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>204,
             'zone_id'=>4,
             'name'=>"Benin",
@@ -276,7 +276,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>652,
             'zone_id'=>3,
             'name'=>"Saint Barth&eacute;lemy",
@@ -286,7 +286,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>60,
             'zone_id'=>3,
             'name'=>"Bermudas",
@@ -296,7 +296,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>96,
             'zone_id'=>9,
             'name'=>"Brunei Darussalam",
@@ -306,7 +306,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>68,
             'zone_id'=>6,
             'name'=>"Bolivia",
@@ -316,7 +316,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>535,
             'zone_id'=>3,
             'name'=>"Bonaire,
@@ -327,7 +327,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>76,
             'zone_id'=>6,
             'name'=>"Brazil",
@@ -337,7 +337,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>44,
             'zone_id'=>3,
             'name'=>"Bahamas",
@@ -347,7 +347,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>64,
             'zone_id'=>8,
             'name'=>"Bhutan",
@@ -357,7 +357,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>74,
             'zone_id'=>10,
             'name'=>"Bouvet Island",
@@ -367,7 +367,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>72,
             'zone_id'=>4,
             'name'=>"Botswana",
@@ -377,7 +377,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>112,
             'zone_id'=>1,
             'name'=>"Belarus",
@@ -387,7 +387,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>84,
             'zone_id'=>3,
             'name'=>"Belize",
@@ -397,7 +397,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>124,
             'zone_id'=>11,
             'name'=>"Canada",
@@ -407,7 +407,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>166,
             'zone_id'=>8,
             'name'=>"Cocos Islands",
@@ -417,7 +417,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>180,
             'zone_id'=>4,
             'name'=>"The Democratic Republic of the Congo",
@@ -427,7 +427,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>140,
             'zone_id'=>4,
             'name'=>"Central African Republic",
@@ -437,7 +437,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>178,
             'zone_id'=>4,
             'name'=>"Congo",
@@ -447,7 +447,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>756,
             'zone_id'=>1,
             'name'=>"Switzerland",
@@ -457,7 +457,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>384,
             'zone_id'=>4,
             'name'=>"Côte d'Ivoire",
@@ -467,7 +467,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>184,
             'zone_id'=>10,
             'name'=>"Cook Islands",
@@ -477,7 +477,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>152,
             'zone_id'=>6,
             'name'=>"Chile",
@@ -487,7 +487,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>120,
             'zone_id'=>4,
             'name'=>"Cameroon",
@@ -497,7 +497,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>156,
             'zone_id'=>9,
             'name'=>"China",
@@ -507,7 +507,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>170,
             'zone_id'=>6,
             'name'=>"Colombia",
@@ -517,7 +517,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>188,
             'zone_id'=>6,
             'name'=>"Costa Rica",
@@ -527,7 +527,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>200,
             'zone_id'=>1,
             'name'=>"Czechoslovakia",
@@ -537,7 +537,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>128,
             'zone_id'=>7,
             'name'=>"Canton and Enderbury Islands",
@@ -547,7 +547,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>192,
             'zone_id'=>6,
             'name'=>"Cuba",
@@ -557,7 +557,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>132,
             'zone_id'=>10,
             'name'=>"Cabo Verde",
@@ -567,7 +567,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>531,
             'zone_id'=>3,
             'name'=>"Curaçao",
@@ -577,7 +577,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>162,
             'zone_id'=>15,
             'name'=>"Christmas Island",
@@ -587,7 +587,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>196,
             'zone_id'=>2,
             'name'=>"Cyprus",
@@ -597,7 +597,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>203,
             'zone_id'=>1,
             'name'=>"Czech Republic",
@@ -607,7 +607,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>276,
             'zone_id'=>1,
             'name'=>"Germany",
@@ -617,7 +617,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>262,
             'zone_id'=>4,
             'name'=>"Djibouti",
@@ -627,7 +627,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>208,
             'zone_id'=>1,
             'name'=>"Denmark",
@@ -637,7 +637,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>212,
             'zone_id'=>3,
             'name'=>"Dominica",
@@ -647,7 +647,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>214,
             'zone_id'=>6,
             'name'=>"Dominican Republic",
@@ -657,7 +657,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>12,
             'zone_id'=>12,
             'name'=>"Algeria",
@@ -667,7 +667,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>218,
             'zone_id'=>6,
             'name'=>"Ecuador",
@@ -677,7 +677,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>233,
             'zone_id'=>1,
             'name'=>"Estonia",
@@ -687,7 +687,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>818,
             'zone_id'=>2,
             'name'=>"Egypt",
@@ -697,7 +697,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>732,
             'zone_id'=>16,
             'name'=>"Western Sahara",
@@ -707,7 +707,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>232,
             'zone_id'=>4,
             'name'=>"Eritrea",
@@ -717,7 +717,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>724,
             'zone_id'=>1,
             'name'=>"Spain",
@@ -727,7 +727,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>231,
             'zone_id'=>4,
             'name'=>"Ethiopia",
@@ -737,7 +737,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>246,
             'zone_id'=>1,
             'name'=>"Finland",
@@ -747,7 +747,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>242,
             'zone_id'=>7,
             'name'=>"Fiji",
@@ -757,7 +757,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>238,
             'zone_id'=>10,
             'name'=>"Falkland Islands [Malvinas
@@ -768,7 +768,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>583,
             'zone_id'=>7,
             'name'=>"Micronesia",
@@ -778,7 +778,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>234,
             'zone_id'=>1,
             'name'=>"Faroe Island",
@@ -788,7 +788,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>250,
             'zone_id'=>1,
             'name'=>"France",
@@ -798,7 +798,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>266,
             'zone_id'=>4,
             'name'=>"Gabon",
@@ -808,7 +808,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>826,
             'zone_id'=>1,
             'name'=>"United Kingdom of Great Britain and Northern Ireland",
@@ -818,7 +818,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>308,
             'zone_id'=>3,
             'name'=>"Grenada",
@@ -828,7 +828,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>268,
             'zone_id'=>2,
             'name'=>"Georgia",
@@ -838,7 +838,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>254,
             'zone_id'=>6,
             'name'=>"French Guiana",
@@ -848,7 +848,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>831,
             'zone_id'=>1,
             'name'=>"Guernsey",
@@ -858,7 +858,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>288,
             'zone_id'=>4,
             'name'=>"Ghana",
@@ -868,7 +868,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>292,
             'zone_id'=>1,
             'name'=>"Gibraltar",
@@ -878,7 +878,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>304,
             'zone_id'=>13,
             'name'=>"Greenland",
@@ -888,7 +888,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>270,
             'zone_id'=>4,
             'name'=>"Gambia",
@@ -898,7 +898,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>324,
             'zone_id'=>4,
             'name'=>"Guinea",
@@ -908,7 +908,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>312,
             'zone_id'=>3,
             'name'=>"Guadeloupe",
@@ -918,7 +918,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>226,
             'zone_id'=>4,
             'name'=>"Equatorial Guinea",
@@ -928,7 +928,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>300,
             'zone_id'=>1,
             'name'=>"Greece",
@@ -938,7 +938,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>239,
             'zone_id'=>10,
             'name'=>"South Georgia and the South Sandwich Islands",
@@ -948,7 +948,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>320,
             'zone_id'=>6,
             'name'=>"Guatemala",
@@ -958,7 +958,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>316,
             'zone_id'=>7,
             'name'=>"Guam",
@@ -968,7 +968,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>624,
             'zone_id'=>4,
             'name'=>"Guinea-Bissau",
@@ -978,7 +978,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>328,
             'zone_id'=>6,
             'name'=>"Guyana",
@@ -988,7 +988,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>344,
             'zone_id'=>9,
             'name'=>"Hong Kong",
@@ -998,7 +998,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>334,
             'zone_id'=>10,
             'name'=>"Heard Island and McDonald Islands",
@@ -1008,7 +1008,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>340,
             'zone_id'=>6,
             'name'=>"Honduras",
@@ -1018,7 +1018,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>191,
             'zone_id'=>1,
             'name'=>"Croatia",
@@ -1028,7 +1028,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>332,
             'zone_id'=>6,
             'name'=>"Haiti",
@@ -1038,7 +1038,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>348,
             'zone_id'=>1,
             'name'=>"Hungary",
@@ -1048,7 +1048,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>360,
             'zone_id'=>9,
             'name'=>"Indonesia",
@@ -1058,7 +1058,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>372,
             'zone_id'=>1,
             'name'=>"Ireland",
@@ -1068,7 +1068,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>376,
             'zone_id'=>2,
             'name'=>"Israel",
@@ -1078,7 +1078,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>833,
             'zone_id'=>1,
             'name'=>"Isle of Man",
@@ -1088,7 +1088,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>356,
             'zone_id'=>8,
             'name'=>"India",
@@ -1098,7 +1098,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>86,
             'zone_id'=>7,
             'name'=>"British Indian Ocean Territory",
@@ -1108,7 +1108,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>368,
             'zone_id'=>2,
             'name'=>"Iraq",
@@ -1118,7 +1118,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>364,
             'zone_id'=>4,
             'name'=>"Iran",
@@ -1128,7 +1128,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>352,
             'zone_id'=>10,
             'name'=>"Iceland",
@@ -1138,7 +1138,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>380,
             'zone_id'=>1,
             'name'=>"Italy",
@@ -1148,7 +1148,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>832,
             'zone_id'=>1,
             'name'=>"Jersey",
@@ -1158,7 +1158,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>388,
             'zone_id'=>6,
             'name'=>"Jamaica",
@@ -1168,7 +1168,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>400,
             'zone_id'=>2,
             'name'=>"Jordan",
@@ -1178,7 +1178,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>392,
             'zone_id'=>9,
             'name'=>"Japan",
@@ -1188,7 +1188,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>404,
             'zone_id'=>4,
             'name'=>"Kenya",
@@ -1198,7 +1198,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>417,
             'zone_id'=>2,
             'name'=>"Kyrgyzstan",
@@ -1208,7 +1208,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>116,
             'zone_id'=>9,
             'name'=>"Cambodia",
@@ -1218,7 +1218,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>296,
             'zone_id'=>7,
             'name'=>"Kiribati",
@@ -1228,7 +1228,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>174,
             'zone_id'=>4,
             'name'=>"Comoros",
@@ -1238,7 +1238,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>659,
             'zone_id'=>3,
             'name'=>"Saint Kitts and Nevis",
@@ -1248,7 +1248,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>408,
             'zone_id'=>9,
             'name'=>"Democratic People's Republic of Korea",
@@ -1258,7 +1258,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>410,
             'zone_id'=>9,
             'name'=>"Republic of Korea ",
@@ -1268,7 +1268,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>414,
             'zone_id'=>2,
             'name'=>"Kuwait",
@@ -1278,7 +1278,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>136,
             'zone_id'=>3,
             'name'=>"Cayman Island",
@@ -1288,7 +1288,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>398,
             'zone_id'=>2,
             'name'=>"Kazakhstan",
@@ -1298,7 +1298,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>418,
             'zone_id'=>9,
             'name'=>"Lao People's Democratic Republic",
@@ -1308,7 +1308,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>422,
             'zone_id'=>2,
             'name'=>"Lebanon",
@@ -1318,7 +1318,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>662,
             'zone_id'=>3,
             'name'=>"Saint Lucia",
@@ -1328,7 +1328,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>438,
             'zone_id'=>1,
             'name'=>"Liechtenstein",
@@ -1338,7 +1338,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>144,
             'zone_id'=>15,
             'name'=>"Sri Lanka",
@@ -1348,7 +1348,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>430,
             'zone_id'=>4,
             'name'=>"Liberia",
@@ -1358,7 +1358,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>426,
             'zone_id'=>4,
             'name'=>"Lesotho",
@@ -1368,7 +1368,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>440,
             'zone_id'=>1,
             'name'=>"Lithuania",
@@ -1378,7 +1378,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>442,
             'zone_id'=>1,
             'name'=>"Luxembourg",
@@ -1388,7 +1388,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>428,
             'zone_id'=>1,
             'name'=>"Latvia",
@@ -1398,7 +1398,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>434,
             'zone_id'=>12,
             'name'=>"Libya",
@@ -1408,7 +1408,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>504,
             'zone_id'=>12,
             'name'=>"Morocco",
@@ -1418,7 +1418,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>492,
             'zone_id'=>1,
             'name'=>"Monaco",
@@ -1428,7 +1428,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>498,
             'zone_id'=>1,
             'name'=>"Moldova",
@@ -1438,7 +1438,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>499,
             'zone_id'=>1,
             'name'=>"Montenegro",
@@ -1448,7 +1448,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>450,
             'zone_id'=>4,
             'name'=>"Madagascar",
@@ -1458,7 +1458,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>584,
             'zone_id'=>7,
             'name'=>"Marshall Islands",
@@ -1468,7 +1468,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>807,
             'zone_id'=>1,
             'name'=>"Macedonia",
@@ -1478,7 +1478,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>466,
             'zone_id'=>4,
             'name'=>"Mali",
@@ -1488,7 +1488,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>104,
             'zone_id'=>9,
             'name'=>"Myanmar",
@@ -1498,7 +1498,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>496,
             'zone_id'=>9,
             'name'=>"Mongolia",
@@ -1508,7 +1508,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>446,
             'zone_id'=>9,
             'name'=>"Macao",
@@ -1518,7 +1518,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>474,
             'zone_id'=>3,
             'name'=>"Martinique",
@@ -1528,7 +1528,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>478,
             'zone_id'=>12,
             'name'=>"Mauritania",
@@ -1538,7 +1538,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>500,
             'zone_id'=>3,
             'name'=>"Montserrat",
@@ -1548,7 +1548,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>470,
             'zone_id'=>1,
             'name'=>"Malta",
@@ -1558,7 +1558,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>480,
             'zone_id'=>4,
             'name'=>"Mauritius",
@@ -1568,7 +1568,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>462,
             'zone_id'=>15,
             'name'=>"Maldives",
@@ -1578,7 +1578,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>454,
             'zone_id'=>4,
             'name'=>"Malawi",
@@ -1588,7 +1588,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>484,
             'zone_id'=>6,
             'name'=>"Mexico",
@@ -1598,7 +1598,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>458,
             'zone_id'=>9,
             'name'=>"Malaysia",
@@ -1608,7 +1608,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>508,
             'zone_id'=>4,
             'name'=>"Mozambique",
@@ -1618,7 +1618,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>516,
             'zone_id'=>4,
             'name'=>"Namibia",
@@ -1628,7 +1628,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>540,
             'zone_id'=>7,
             'name'=>"New Caledonia",
@@ -1638,7 +1638,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>562,
             'zone_id'=>4,
             'name'=>"Niger",
@@ -1648,7 +1648,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>574,
             'zone_id'=>7,
             'name'=>"Norfolk Island",
@@ -1658,7 +1658,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>566,
             'zone_id'=>4,
             'name'=>"Nigeria",
@@ -1668,7 +1668,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>558,
             'zone_id'=>6,
             'name'=>"Nicaragua",
@@ -1678,7 +1678,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>528,
             'zone_id'=>1,
             'name'=>"Netherlands",
@@ -1688,7 +1688,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>578,
             'zone_id'=>7,
             'name'=>"Norway",
@@ -1698,7 +1698,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>524,
             'zone_id'=>8,
             'name'=>"Nepal",
@@ -1708,7 +1708,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>520,
             'zone_id'=>7,
             'name'=>"Nauru",
@@ -1718,7 +1718,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>570,
             'zone_id'=>7,
             'name'=>"Niue",
@@ -1728,7 +1728,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>554,
             'zone_id'=>7,
             'name'=>"New Zealand",
@@ -1738,7 +1738,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>512,
             'zone_id'=>2,
             'name'=>"Oman",
@@ -1748,7 +1748,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>591,
             'zone_id'=>6,
             'name'=>"Panama",
@@ -1758,7 +1758,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>604,
             'zone_id'=>6,
             'name'=>"Peru",
@@ -1768,7 +1768,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>258,
             'zone_id'=>10,
             'name'=>"French Polynesia",
@@ -1778,7 +1778,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>598,
             'zone_id'=>9,
             'name'=>"Papua New Guinea",
@@ -1788,7 +1788,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>608,
             'zone_id'=>9,
             'name'=>"Philippines",
@@ -1798,7 +1798,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>586,
             'zone_id'=>2,
             'name'=>"Pakistan",
@@ -1808,7 +1808,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>616,
             'zone_id'=>1,
             'name'=>"Poland",
@@ -1818,7 +1818,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>666,
             'zone_id'=>1,
             'name'=>"Saint Pierre and Miquelon",
@@ -1828,7 +1828,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>612,
             'zone_id'=>10,
             'name'=>"Pitcairn",
@@ -1838,7 +1838,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>630,
             'zone_id'=>6,
             'name'=>"Puerto Rico",
@@ -1848,7 +1848,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>275,
             'zone_id'=>2,
             'name'=>"Palestine",
@@ -1858,7 +1858,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>620,
             'zone_id'=>1,
             'name'=>"Portugal",
@@ -1868,7 +1868,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>585,
             'zone_id'=>1,
             'name'=>"Palau",
@@ -1878,7 +1878,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>600,
             'zone_id'=>6,
             'name'=>"Paraguay",
@@ -1888,7 +1888,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>634,
             'zone_id'=>2,
             'name'=>"Qatar",
@@ -1898,7 +1898,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>638,
             'zone_id'=>14,
             'name'=>"Reuni&oacute;n",
@@ -1908,7 +1908,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>642,
             'zone_id'=>1,
             'name'=>"Romania",
@@ -1918,7 +1918,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>688,
             'zone_id'=>1,
             'name'=>"Serbia",
@@ -1928,7 +1928,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>643,
             'zone_id'=>9,
             'name'=>"Russia",
@@ -1938,7 +1938,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>646,
             'zone_id'=>4,
             'name'=>"Rwanda",
@@ -1948,7 +1948,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>682,
             'zone_id'=>2,
             'name'=>"Saudi Arabia",
@@ -1958,7 +1958,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>90,
             'zone_id'=>7,
             'name'=>"Solomon Islands",
@@ -1968,7 +1968,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>690,
             'zone_id'=>4,
             'name'=>"Seychelles",
@@ -1978,7 +1978,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>736,
             'zone_id'=>4,
             'name'=>"Sudan",
@@ -1988,7 +1988,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>752,
             'zone_id'=>1,
             'name'=>"Sweden",
@@ -1998,7 +1998,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>702,
             'zone_id'=>9,
             'name'=>"Singapore",
@@ -2008,7 +2008,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>654,
             'zone_id'=>10,
             'name'=>"Saint Helena",
@@ -2018,7 +2018,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>705,
             'zone_id'=>1,
             'name'=>"Slovenia",
@@ -2028,7 +2028,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>744,
             'zone_id'=>1,
             'name'=>"Svalbard Island and Jan Mayen",
@@ -2038,7 +2038,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>703,
             'zone_id'=>1,
             'name'=>"Slovakia",
@@ -2048,7 +2048,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>694,
             'zone_id'=>4,
             'name'=>"Sierra Leone",
@@ -2058,7 +2058,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>674,
             'zone_id'=>1,
             'name'=>"San Marino",
@@ -2068,7 +2068,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>686,
             'zone_id'=>4,
             'name'=>"Senegal",
@@ -2078,7 +2078,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>706,
             'zone_id'=>4,
             'name'=>"Somalia",
@@ -2088,7 +2088,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>740,
             'zone_id'=>6,
             'name'=>"Suriname",
@@ -2098,7 +2098,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>678,
             'zone_id'=>4,
             'name'=>"Sao Tome and Principe",
@@ -2108,7 +2108,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>222,
             'zone_id'=>6,
             'name'=>"El Salvador",
@@ -2118,7 +2118,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>760,
             'zone_id'=>2,
             'name'=>"Syria",
@@ -2128,7 +2128,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>748,
             'zone_id'=>4,
             'name'=>"Swaziland",
@@ -2138,7 +2138,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>796,
             'zone_id'=>1,
             'name'=>"Turks and Caicos Islands",
@@ -2148,7 +2148,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>148,
             'zone_id'=>4,
             'name'=>"Chad",
@@ -2158,7 +2158,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>260,
             'zone_id'=>1,
             'name'=>"French Southern Territories",
@@ -2168,7 +2168,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>768,
             'zone_id'=>4,
             'name'=>"Togo",
@@ -2178,7 +2178,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>764,
             'zone_id'=>9,
             'name'=>"Thailand",
@@ -2188,7 +2188,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>762,
             'zone_id'=>2,
             'name'=>"Tajikistan",
@@ -2198,7 +2198,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>772,
             'zone_id'=>7,
             'name'=>"Tokelau",
@@ -2208,7 +2208,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>626,
             'zone_id'=>9,
             'name'=>"Timor-Leste",
@@ -2218,7 +2218,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>795,
             'zone_id'=>2,
             'name'=>"Turkmenistan",
@@ -2228,7 +2228,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>788,
             'zone_id'=>12,
             'name'=>"Tunisia",
@@ -2238,7 +2238,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>776,
             'zone_id'=>7,
             'name'=>"Tonga",
@@ -2248,7 +2248,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>792,
             'zone_id'=>2,
             'name'=>"Turkey",
@@ -2258,7 +2258,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>780,
             'zone_id'=>3,
             'name'=>"Trinidad and Tobago",
@@ -2268,7 +2268,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>798,
             'zone_id'=>7,
             'name'=>"Tuvalu",
@@ -2278,7 +2278,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>158,
             'zone_id'=>9,
             'name'=>"Taiwan",
@@ -2288,7 +2288,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>834,
             'zone_id'=>4,
             'name'=>"Tanzania",
@@ -2298,7 +2298,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>804,
             'zone_id'=>1,
             'name'=>"Ukraine",
@@ -2308,7 +2308,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>800,
             'zone_id'=>4,
             'name'=>"Uganda",
@@ -2318,7 +2318,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>840,
             'zone_id'=>11,
             'name'=>"United States of America",
@@ -2328,7 +2328,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>858,
             'zone_id'=>6,
             'name'=>"Uruguay",
@@ -2338,7 +2338,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>860,
             'zone_id'=>2,
             'name'=>"Uzbekistan",
@@ -2348,7 +2348,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>336,
             'zone_id'=>1,
             'name'=>"Holy See",
@@ -2358,7 +2358,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>670,
             'zone_id'=>3,
             'name'=>"Saint Vicent and the Grenadines",
@@ -2368,7 +2368,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>862,
             'zone_id'=>6,
             'name'=>"Venezuela",
@@ -2378,7 +2378,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>92,
             'zone_id'=>4,
             'name'=>"Virgin Islands (British)",
@@ -2388,7 +2388,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>850,
             'zone_id'=>3,
             'name'=>"Virgin Islands (U.S.A)",
@@ -2398,7 +2398,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>704,
             'zone_id'=>9,
             'name'=>"Viet Nam",
@@ -2408,7 +2408,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>548,
             'zone_id'=>7,
             'name'=>"Vanuatu",
@@ -2418,7 +2418,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>876,
             'zone_id'=>7,
             'name'=>"Wallis and Futuna",
@@ -2428,7 +2428,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>882,
             'zone_id'=>7,
             'name'=>"Samoa",
@@ -2438,7 +2438,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>887,
             'zone_id'=>2,
             'name'=>"Yemen",
@@ -2448,7 +2448,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>175,
             'zone_id'=>14,
             'name'=>"Mayotte",
@@ -2458,7 +2458,7 @@ class CountriesTableSeederFull extends Seeder
             'updated_at' => $today,
         ]);
 
-        DB::table('countries')->insert([
+        DB::table('ctrystore_countries')->insert([
             'id'=>710,
             'zone_id'=>4,
             'name'=>"South Africa",

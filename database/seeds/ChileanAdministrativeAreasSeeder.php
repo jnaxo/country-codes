@@ -2,14 +2,14 @@
 
 use Illuminate\Database\Seeder;
 
-class AdministrativeDivisionsTableSeeder extends Seeder
+class ChileanAdministrativeAreasSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run()
     {
-        DB::table('administrative_divisions')->delete();
+        DB::table('ctrystore_administrative_areas')->delete();
 
         $today = date('Y-m-d H:i:s');
         $data = [
@@ -40,13 +40,13 @@ class AdministrativeDivisionsTableSeeder extends Seeder
         ];
 
         foreach ($data as $i => $ad) {
-            DB::table('administrative_divisions')->insert([
+            DB::table('ctrystore_administrative_areas')->insert([
                 'id' => $i + 1,
                 'country_id' => 152,
                 'name' => $ad['name'],
                 'code' => $ad['code'],
                 'tag' => $ad['tag'],
-                'administrative_division_kind_id' => 1,
+                'admin_division_id' => 1,
                 'created_at' => $today,
                 'updated_at' => $today,
             ]);

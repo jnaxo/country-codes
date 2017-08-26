@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAdministrativeDivisionKindsTable extends Migration
+class CreateCtrystoreAdministrativeDivisionsTable extends Migration
 {
 
     /**
@@ -15,7 +15,7 @@ class CreateAdministrativeDivisionKindsTable extends Migration
     public function up()
     {
         Schema::create(
-            'administrative_division_kinds',
+            'ctrystore_administrative_divisions',
             function (Blueprint $table) {
                 $table->increments('id');
                 $table->integer('level');
@@ -23,7 +23,7 @@ class CreateAdministrativeDivisionKindsTable extends Migration
                 $table->integer('country_id')->unsigned()->index();
                 $table->foreign('country_id')
                     ->references('id')
-                    ->on('countries')
+                    ->on('ctrystore_countries')
                     ->onDelete('cascade');
                 $table->timestamps();
             }
@@ -37,6 +37,6 @@ class CreateAdministrativeDivisionKindsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('administrative_division_kinds');
+        Schema::dropIfExists('ctrystore_administrative_divisions');
     }
 }
