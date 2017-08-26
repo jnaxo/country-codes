@@ -1,5 +1,6 @@
 {
     "name": "jnaxo/country-codes",
+    "type": "library",
     "description": "Country codes ISO 3166-1 package",
     "license": "MIT",
     "authors": [
@@ -9,7 +10,7 @@
         }
     ],
     "require": {
-        "php": ">=5.5.9",
+        "php": ">=5.5.9|^7.0",
         "illuminate/support": "~5.0"
     },
     "require-dev": {
