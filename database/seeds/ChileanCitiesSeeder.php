@@ -342,7 +342,7 @@ class ChileanCitiesSeeder extends Seeder
             ['aa_id' => 7, 'name' => 'Villa Alegre'],
             ['aa_id' => 5, 'name' => 'Villa Alemana'],
             ['aa_id' => 9, 'name' => 'Villarrica'],
-            ['aa_id' => 5, 'name' => 'Vina del Mar'],
+            ['aa_id' => 5, 'name' => 'Viña del Mar'],
             ['aa_id' => 13, 'name' => 'Vitacura'],
             ['aa_id' => 7, 'name' => 'Yerbas Buenas'],
             ['aa_id' => 8, 'name' => 'Yumbel'],
